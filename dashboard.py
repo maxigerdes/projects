@@ -14,8 +14,8 @@ st.title(f'Interaktives Wetterdashboard von Maxi')
 
 st.sidebar.title("Navigation")
 seite = st.sidebar.selectbox("Wähle eine Seite:",["Dashboard","Über mich"])
-datum = st.sidebar.date_input("Wie weit soll die Historie zurück gehen?")
-
+datum = st.sidebar.date_input("Wähle den Startzeitpunkt der betrachtung",
+                            value=datetime.today().date() - timedelta(days=90))
 stadtname = st.sidebar.text_input("Wähle eine Stadt aus.")
 
 
